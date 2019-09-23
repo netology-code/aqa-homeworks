@@ -31,7 +31,7 @@ public class CashbackHackService {
 
 ### AppVeyor
 
-[AppVeyor](https://www.appveyor.com) - одна из платформ, предоставляющих функциональность Continuous Deployment. В базовом варианте - бесплатна.
+[AppVeyor](https://www.appveyor.com) - одна из платформ, предоставляющих функциональность Continuous Integration. В базовом варианте - бесплатна.
 
 #### Шаг 0. Конфигурация как код
 
