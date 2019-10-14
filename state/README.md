@@ -29,6 +29,8 @@ public class CashbackHackService {
 }
 ```
 
+Важно: тесты должны храниться отдельно от кода (в каталоге `src/test`)!
+
 ### AppVeyor
 
 [AppVeyor](https://www.appveyor.com) - одна из платформ, предоставляющих функциональность Continuous Integration. В базовом варианте - бесплатна.
