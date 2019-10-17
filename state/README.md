@@ -33,19 +33,19 @@
 package ru.netology.service;
 
 public class CashbackHackService {
-    private final int bonusBoundary = 1000;
+    private final int boundary = 1000;
 
     public int remain(int amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("amount must be greater than zero");
         }
     
-        boolean isNeedMore = amount % bonusBoundary != 0;
+        boolean isNeedMore = amount % boundary != 0;
         if (!isNeedMore) {
             return 0;
         }
 
-        int remain = bonusBoundary - amount % bonusBoundary;
+        int remain = boundary - amount % boundary;
         return remain;
     }
 }
