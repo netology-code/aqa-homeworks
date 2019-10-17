@@ -15,21 +15,25 @@
 package ru.netology.service;
 
 public class CashbackHackService {
-    private final int boundary = 1000;
+    private final int bonusBoundary = 1000;
 
     public int remain(int amount) {
-        boolean isNeedMore = amount % bonusBound != 0;
+        boolean isNeedMore = amount % bonusBoundary != 0;
         if (!isNeedMore) {
             return 0;
         }
 
-        int remain = bonusBound - amount % bonusBound;
+        int remain = bonusBoundary - amount % bonusBoundary;
         return remain;
     }
 }
 ```
 
 Важно: тесты должны храниться отдельно от кода (в каталоге `src/test`)!
+
+Обратите внимание: данный сервис не обрабатывает невалидные сценарии (это будет работа сервиса-валидатора), такие как:
+1. Отрицательная сумма `amount`
+1. `amount` равно 0
 
 ### AppVeyor
 
