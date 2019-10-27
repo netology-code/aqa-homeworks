@@ -104,7 +104,7 @@ on_finish:
   - ps: Stop-Process -Id $App.Id  # оставливаем SUT
 ```
 
-[Подробное описание `Start-Process`](docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process)
+[Подробное описание `Start-Process`](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process)
 
 Естественно, у вас должен возникнуть вопрос, а что будет, если SUT не успеет стартовать к моменту запуска авто-тестов?
 
