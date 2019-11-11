@@ -133,7 +133,7 @@ Authorization: Bearer {{token}}
 ```
 POST http://localhost:9999/api/transfer
 Content-Type: application/json
-Authorization: Bearer {{auth_token}}
+Authorization: Bearer {{token}}
 
 {
   "from": "5559 0000 0000 0002",
