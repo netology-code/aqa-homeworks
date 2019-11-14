@@ -97,7 +97,8 @@ P.S. Неплохо бы ещё проверить, что при трёхкра
 
 Вот описание API:
 
-```json
+- Логин
+```http
 POST http://localhost:9999/api/auth
 Content-Type: application/json
 
@@ -105,9 +106,10 @@ Content-Type: application/json
   "login": "vasya",
   "password": "qwerty123"
 }
+```
 
-###
-
+- Верификация
+```http
 POST http://localhost:9999/api/auth/verification
 Content-Type: application/json
 
@@ -115,22 +117,23 @@ Content-Type: application/json
   "login": "vasya",
   "code": "599640"
 }
+```
+В ответе, в поле "token" придёт токен аутентификации, который нужно использовать в последующих запросах
 
-# В ответе, в поле "token" придёт токен аутентификации, который нужно использовать в последующих запросах
-
-###
-
+- Просмотр карт
+```http
 GET http://localhost:9999/api/cards
 Content-Type: application/json
 Authorization: Bearer {{token}}
+```
 
-# где {{token}} -  это значение "token" с предыдущего шага (фигурные скобки писать не нужно)
+Где {{token}} -  это значение "token" с предыдущего шага (фигурные скобки писать не нужно)
 
-###
-
+- Перевод с карты на карту (любую)
+```
 POST http://localhost:9999/api/transfer
 Content-Type: application/json
-Authorization: Bearer {{auth_token}}
+Authorization: Bearer {{token}}
 
 {
   "from": "5559 0000 0000 0002",
