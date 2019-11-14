@@ -15,7 +15,7 @@
 
 [2.3. Patterns](patterns/)
 
-[2.4. Akita](akita/)
+[2.4. BDD](bdd/)
 
 ## Блок 3. Docker и SQL
 
