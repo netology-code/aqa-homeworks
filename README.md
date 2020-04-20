@@ -6,7 +6,7 @@
 
 [1.1. Основы автоматизации, Unit-тесты](basics)
 
-[1.2. Управление состоянием, Continuous Integration](state/)
+[1.2. Тестирование API, Continuous Integration](api-ci/)
 
 ## Блок 2. Тестирование веб-интерфейсов
 
