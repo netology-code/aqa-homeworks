@@ -130,6 +130,47 @@ Content-Type: application/json
 ```
 В ответе, в поле "token" придёт токен аутентификации, который нужно использовать в последующих запросах
 
+<details>
+<summary>Подсказка по REST-assured</summary>
+
+Если вам приходит в ответ следующий JSON:
+```json
+{
+  "status": "ok"
+}
+```
+
+То вы можете "вытащить" значение из ответа с помощью REST-assured следующим образом:
+
+```java
+      String status = ... // ваш обычный запрос  
+      .then()
+          .statusCode(200)
+      .extract()
+          .path("status")
+      ;
+
+      // используются matcher'ы Hamcrest
+      assertThat(status, equalTo("ok"));
+```
+
+Если вам нужно "вытащить" весь ответ, чтобы потом искать по нему (например, нужно несколько полей), то:
+
+```java
+      Response response = ... // ваш обычный запрос  
+      .then()
+          .statusCode(200)
+      .extract()
+          .response()
+      ;
+
+      String status = response.path("status");
+      // используются matcher'ы Hamcrest
+      assertThat(status, equalTo("ok"));
+```
+
+</details>
+
 - Просмотр карт
 ```http
 GET http://localhost:9999/api/cards
