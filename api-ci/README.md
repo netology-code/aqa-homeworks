@@ -259,7 +259,7 @@ dependencies {
 
 #### Шаг 4. Доработать схему
 
-Изучите документацию на тип [`string`](https://json-schema.org/understanding-json-schema/reference/string.html) и найдите способ валидации значения поля на два из возможных значения: "RUB" или "USD".
+Изучите документацию на тип [`object`](https://json-schema.org/understanding-json-schema/reference/object.html) и найдите способ валидации значения поля на два из возможных значения: "RUB" или "USD".
 
 Доработайте схему соответствующим образом, удостоверьтесь, что тесты проходят (в том числе в CI).
 
