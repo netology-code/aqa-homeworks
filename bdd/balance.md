@@ -72,4 +72,30 @@ public class DashboardPage {
 
 Таким образом, метод `getFirstCardBalance` умеет получать баланс карты. Не сложно его модифицировать под то, чтобы он назывался `getCardBalance` и умел получать баланс по индексу (см. документацию на `ElementsCollection`).
 
-Ну а дальше по аналогии вы можете реализовать всё остальное, если знаете баланс (а ещё лучше отдавать вызывающему коду не индекс карты, а её id, по которому потом можно проверять успешность или неуспешность проведения платежей).
+Важно: это не единственный способ. Можно вычленить баланса через `split(":")` а потом `substring(0, .indexOf("р.")).trim()`;
+
+Ну а дальше по аналогии вы можете реализовать всё остальное, если знаете баланс (а ещё лучше отдавать вызывающему коду не индекс карты, а её id, по которому потом можно проверять успешность или неуспешность проведения платежей). Например:
+
+```java
+public class DashboardPage {
+  // к сожалению, разработчики не дали нам удобного селектора, поэтому так
+  private ElementsCollection cards = $$(".list__item");
+  private final String balanceStart = "баланс: ";
+  private final String balanceFinish = " р.";
+
+  public Dashboard() {
+  }
+
+  public int getCardBalance(String id) {
+    // TODO: перебрать все карты и найти по атрибуту data-test-id
+    return extractBalance(text);
+  }
+
+  private int extractBalance(String text) {
+    val start = text.indexOf(balanceStart);
+    val finish = text.indexOf(balanceFinish);
+    val value = text.substring(start + balanceStart.length(), finish);
+    return Integer.parseInt(value);
+  }
+}
+```
