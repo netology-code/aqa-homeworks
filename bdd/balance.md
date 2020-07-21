@@ -31,7 +31,7 @@
 
 ![](pic/with-kopecks.png)
 
-![](pic/with-kopecks.png)
+![](pic/without-kopecks.png)
 
 Примечание: скриншоты Банка Тинькофф
 
