@@ -21,6 +21,25 @@
 
 В качестве примера можете посмотреть на этот проект (ваш по структуре должен выглядеть так же): https://github.com/netology-code-samples/aqa-ci-demo
 
+## Информация по учебным JAR
+
+Важно: если вы работаете на Windows с Турецкой локалью и при запуске учебных приложений получаете Exception вида:
+```
+Caused by: java.lang.NoSuchFieldException: wrıteHandlerReference (тут не английская i, а именно ı или ?)
+  at java.lang.Class.getDeclaredField(Unknown Source)
+  at java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl$1.run(Unknown Source)
+  at java.util.concurrent.atomic.AtomicReferenceFieldUpdater$AtomicReferenceFieldUpdaterImpl$1.run(Unknown Source)
+  at java.security.AccessController.doPrivileged(Native Method)
+  ... 21 more
+```
+
+Тогда вам все JAR'ники нужно будет запускать командой:
+```
+java -Duser.language=en -Duser.country=US -jar app-mbank.jar
+```
+
+Часть `-jar app-mbank.jar` может меняться, но первая часть для вас во всех ДЗ (при запуске на вашем ПК будет именно такой).
+
 ## Задача №1 - Настройка CI
 
 Напоминаем, CI - это чаще всего отдельная система (сервер, набор серверов, облако), в котором ваш код и ваши авто-тесты собираются в автоматическом режиме (без вашего непосредственного участия). Вы лишь настраиваете CI для того, чтобы при возникновении определённых событий (например, push в репозиторий) стартовал процесс сборки и прогона тестов.
