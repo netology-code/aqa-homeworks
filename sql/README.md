@@ -37,7 +37,7 @@
 
 Что вам нужно сделать:
 1. Внимательно изучить схему
-1. Создать Docker Container на базе MySQL 8.0.18 (прописать создание БД, пользователя, пароля)
+1. Создать Docker Container на базе MySQL 8 (прописать создание БД, пользователя, пароля)
 1. Запустить SUT ([app-deadline.jar](app-deadline.jar)): для указания параметров подключения к БД можно использовать:
 - либо переменные окружения `DB_URL`, `DB_USER`, `DB_PASS`
 - либо указать их через флаги командной строки при запуске: `-P:jdbc.url=...`, `-P:jdbc.user=...`, `-P:jdbc.password=...` (внимание: при запуске флаги не нужно указывать через запятую!)
@@ -129,6 +129,47 @@ Content-Type: application/json
 }
 ```
 В ответе, в поле "token" придёт токен аутентификации, который нужно использовать в последующих запросах
+
+<details>
+<summary>Подсказка по REST-assured</summary>
+
+Если вам приходит в ответ следующий JSON:
+```json
+{
+  "status": "ok"
+}
+```
+
+То вы можете "вытащить" значение из ответа с помощью REST-assured следующим образом:
+
+```java
+      String status = ... // ваш обычный запрос  
+      .then()
+          .statusCode(200)
+      .extract()
+          .path("status")
+      ;
+
+      // используются matcher'ы Hamcrest
+      assertThat(status, equalTo("ok"));
+```
+
+Если вам нужно "вытащить" весь ответ, чтобы потом искать по нему (например, нужно несколько полей), то:
+
+```java
+      Response response = ... // ваш обычный запрос  
+      .then()
+          .statusCode(200)
+      .extract()
+          .response()
+      ;
+
+      String status = response.path("status");
+      // используются matcher'ы Hamcrest
+      assertThat(status, equalTo("ok"));
+```
+
+</details>
 
 - Просмотр карт
 ```http
