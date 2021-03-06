@@ -60,7 +60,7 @@ repositories {
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
-    testImplementation 'com.codeborne:selenide:5.11.0'
+    testImplementation 'com.codeborne:selenide:5.19.0'
 }
 
 test {
@@ -70,11 +70,14 @@ test {
 }
 ```
 
-На серверах сборки чаще всего нет графического интерфейса, поэтому запуская браузер в этом режиме мы не требуем графического интерфейса (при этот все алгоритмы продолжают работать).
+На серверах сборки чаще всего нет графического интерфейса, поэтому запуская браузер в режиме **headless** мы не требуем графического интерфейса (при этот все алгоритмы продолжают работать).
+При использовании **selenium** данный режим настраивается непосредственно в коде во время инициализации драйвера, примеры инициализации можно найти достаточно быстро.
 
 Детальнее можете почитать про Headless:
 - [Chrome](https://www.chromestatus.com/features/5678767817097216)
 - [Gecko (Firefox)](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode)
+
+Если вы выполняете работу с использованием **selenium**, то будьте готовы, что ваша сборка может упасть из-за того, что у вас в репозитории webdriver для другой ОС. Для решения этой проблемы можно использовать библиотеку [webdriver manager](https://github.com/bonigarcia/webdrivermanager). 
 
 ### 3. `.appveyor.yml`
 
