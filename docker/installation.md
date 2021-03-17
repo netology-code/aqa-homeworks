@@ -1,6 +1,6 @@
 # Инструкция по установке Docker
 
-Первое, что нужно сделать - это зарегистрироваться (получить Docker ID) на [Docker Hub](https://hub.docker.com/).
+1. Зарегистрироваться (получить Docker ID) на [Docker Hub](https://hub.docker.com/).
 
 Выбираете `Sign Up`:
 
@@ -8,7 +8,7 @@
 
 Заполняете форму, регистрируйтесь.
 
-Второе, что нужно сделать - это определиться с вашей ОС и версией:
+2. Определиться с вашей ОС и версией:
 * Пользователи Windows 8, 7 - вам нужен Docker Toolbox. Скачать [здесь](https://github.com/docker/toolbox/releases)
 * Пользователи Windows 10 - вам нужен Docker Desktop. Установка описана [здесь](https://docs.docker.com/docker-for-windows/install/).
 * Пользователи MacOS (год выпуска 2010+ и ОС 10.13 и выше) - вам нужен Docker Desktop. Установка описана [здесь](https://docs.docker.com/docker-for-mac/install/)
@@ -66,7 +66,7 @@ tmux
 
 [Документация по tmux](http://xgu.ru/wiki/tmux)
 
-Вам нужно только вот эти хоткеи:
+Вам нужно только вот эти горячие клавиши:
 * Создание нового окна: ctrl + b + c
 * Переход на следующее окно (текущее выделено *): ctrl + b + n
 * Закрытие текущего окна: ctrl + b + x
