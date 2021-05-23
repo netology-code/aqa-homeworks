@@ -137,6 +137,7 @@ repositories {
 dependencies {
     testImplementation 'io.rest-assured:rest-assured:4.3.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
+	testImplementation 'io.rest-assured:json-schema-validator:4.3.1'
 }
 
 test {
