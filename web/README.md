@@ -81,12 +81,17 @@ test {
 
 Включение **headless** режима при использовании **selenium** необходимо реализовать в коде во время создания экземпляра webdriver:  
 
-```
+```java
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless");
 driver = new ChromeDriver(options);
+```
+
+Для **selenide** **headless** режим активируется при запуске тестов с определенным параметром:  
+```
+gradlew test -Dselenide.headless=true
 ```
 
 #### **Webdriver для разных операционных систем**
@@ -112,7 +117,7 @@ AppVeyor настраивается аналогично предыдущей л
 
 Условия: если все поля заполнены корректно, то вы получаете сообщение об успешно отправленной заявке:
 
-![](pic/success.png)
+![](pic/success.jpg)
 
 Вам необходимо самостоятельно изучить элементы на странице, чтобы подобрать правильные селекторы.
 
