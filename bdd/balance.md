@@ -49,7 +49,7 @@
 ```java
 public class DashboardPage {
   // к сожалению, разработчики не дали нам удобного селектора, поэтому так
-  private ElementsCollection cards = $$(".list__item");
+  private ElementsCollection cards = $$(".list__item div");
   private final String balanceStart = "баланс: ";
   private final String balanceFinish = " р.";
 
@@ -79,7 +79,7 @@ public class DashboardPage {
 ```java
 public class DashboardPage {
   // к сожалению, разработчики не дали нам удобного селектора, поэтому так
-  private ElementsCollection cards = $$(".list__item");
+  private ElementsCollection cards = $$(".list__item div");
   private final String balanceStart = "баланс: ";
   private final String balanceFinish = " р.";
 
