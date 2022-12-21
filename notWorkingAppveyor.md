@@ -53,8 +53,7 @@ jobs:
    5.2 Помещаем туда этот код
   
 [![Java CI with Gradle](https://github.com/<вашае имя на гитхаб>/<название репозитория>/actions/workflows/gradle.yml/badge.svg)](https://github.com/<вашае имя на гитхаб>/<название репозитория>/actions/workflows/gradle.yml)
+
 Где вместо <....> нужно вписать ваши данные 
-если у адрес на ваш репозиторий 
-https://github.com/IvanIvanov123/myRepo 
- вместо <вашае имя на гитхаб>/<название репозитория>
-нужно вставить IvanIvanov123/myRepo
+
+Если адрес на ваш репозиторий https://github.com/IvanIvanov123/myRepo , вместо <ваше имя на гитхаб>/<название репозитория> нужно вставить IvanIvanov123/myRepo
