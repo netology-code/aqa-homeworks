@@ -6,31 +6,31 @@
 
 ## Блок 1. Основы автоматизации, платформа JUnit
 
-[1.1. Основы автоматизации, Unit-тесты](basics)
+[1. Основы автоматизации, Unit-тесты](basics)
 
-[1.2. Тестирование API, Continuous Integration](api-ci)
+[2. Тестирование API, Continuous Integration](api-ci)
 
 ## Блок 2. Тестирование веб-интерфейсов
 
-[2.1. Тестирование веб-интерфейсов, Selenium и Selenide](web)
+[3. Тестирование веб-интерфейсов, Selenium и Selenide](web)
 
-[2.2. Selenide](selenide)
+[4. Selenide](selenide)
 
-[2.3. Patterns](patterns)
+[5. Patterns](patterns)
 
-[2.4. BDD](bdd)
+[6. BDD](bdd)
 
 ## Блок 3. Docker и SQL
 
-[3.1. Docker и Docker Compose](docker)
+[7. Docker и Docker Compose](docker)
 
-[3.2. SQL](sql)
+[8. SQL](sql)
 
 ## Блок 4. Отчётность и анализ
 
-[4.1. Репортинг: Report Portal](reporting)
+[9. Репортинг: Report Portal](reporting)
 
-[4.2. Заключительная лекция](summary)
+[10. Заключительная лекция](summary)
 
 
 
