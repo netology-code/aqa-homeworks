@@ -318,7 +318,8 @@ given()
 3. Напишите тест, взяв сам запрос из кода выше.
 4. Изучите ответ и напишите JSONPath-выражение вместо строк `/* --> ваша проверка здесь <--*/`, которое проверит, что в нужном поле хранятся отправленные вами данные. Обратите внимание, теперь у вас не массив, а объект.
 
-Можете воспользоваться сервисом https://rapathevaluate.herokuapp.com для быстрой проверки своих JSONPath-выражений.
+Можете воспользоваться сервисами https://extendsclass.com/jsonpath-tester.html или https://jsonpath.com/ для быстрой проверки выражений. Описание синтаксиса
+https://testerslittlehelper.wordpress.com/2019/01/20/jsonpath-in-rest-assured/ и https://github.com/rest-assured/rest-assured/wiki/Usage#json-using-jsonpath.
 
 Удостоверьтесь, что если вы будете использовать неверное выражение, то тесты упадут, в том числе и в CI.
 
