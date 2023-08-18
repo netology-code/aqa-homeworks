@@ -63,12 +63,12 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
     // библиотека com.codeborne:selenide используется при построении проекта с использованием Selenide
-    testImplementation 'com.codeborne:selenide:6.13.0'
+    testImplementation 'com.codeborne:selenide:6.17.0'
     
     // при реализации проекте с использованием Selenium вместо библиотеки com.codeborne:selenide подключаются
     // org.seleniumhq.selenium:selenium-java и io.github.bonigarcia:webdrivermanager
-    // testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.3'
-    // testImplementation 'io.github.bonigarcia:webdrivermanager:5.3.0'
+    // testImplementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+    // testImplementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
 }
 
 test {
