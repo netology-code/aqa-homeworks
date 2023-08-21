@@ -95,7 +95,7 @@ AppVeyor предлагает вам два вида серверов, на ко
 ##### Linux Config
 
 ```yaml
-image: Ubuntu  # образ для сборки
+image: Ubuntu2004  # образ для сборки
 
 stack: jdk 11  # версия JDK
 
