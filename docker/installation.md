@@ -9,19 +9,17 @@
 Заполняете форму, регистрируйтесь.
 
 2. Определиться с вашей ОС и версией:
-* Пользователи Windows 8, 7 - вам нужен Docker Toolbox. Скачать [здесь](https://github.com/docker/toolbox/releases)
-* Пользователи Windows 10 - вам нужен Docker Desktop. Установка описана [здесь](https://docs.docker.com/docker-for-windows/install/).
-* Пользователи MacOS (год выпуска 2010+ и ОС 10.13 и выше) - вам нужен Docker Desktop. Установка описана [здесь](https://docs.docker.com/docker-for-mac/install/)
+* Пользователи Windows 10 и Windows 11 начиная с версии 21H2 - вам нужен Docker Desktop. Установка описана [здесь](https://docs.docker.com/docker-for-windows/install/).
+* Пользователи MacOS начиная с Big Sur - вам нужен Docker Desktop. Установка описана [здесь](https://docs.docker.com/docker-for-mac/install/)
 * Пользователи Linux, в зависимости от дистрибутива: [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [Debian](https://docs.docker.com/install/linux/docker-ce/debian/). Не забудьте так же про [Post Installation](https://docs.docker.com/install/linux/linux-postinstall/)
+* Пользователи Windows 7, Windows 8, неподдерживаемых версий Windows 10, Windows 11 и MacOS могут использовать виртуальную машину, предоставляемую Нетологией. [Инструкция по подключению к виртуальной машине Linux](./timeweb-instruction.md).    
 
-**Важно**: замечание для пользователей Docker Toolbox на Windows - вам вместо localhost придётся писать `192.168.99.100`. Это ip виртуальной linux машины, в которой уже и запускается docker.
-
-Если работать не будет, то выполните в консоли команду `docker-machine ip default` и увидите адрес (его нужно будет использовать во всех примерах вместо `localhost`).
-
-Q: Что делать, если ничего не получилось?
+Q: Что делать, если ничего не получилось?      
 A: Обратитесь за консультацией к координатору группы или к преподавателю.
 
 ## Работа с Play With Docker
+
+**Использование и настройка сервиса Play With Docker не являются обязательными. Сервис можно использовать в ознакомительных целях. Домашние задания рекомендуется выполнять на локальной машине с помощью Docker Desktop, либо на виртуальной машине.**        
 
 Логинитесь, получаете сессию в несколько часов:
 
