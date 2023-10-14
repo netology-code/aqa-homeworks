@@ -202,7 +202,7 @@ AppVeyor предоставляет бесплатный тарифный пла
 
 ## Задача №2: JSON Schema
 
-JSON Schema предлагает нам инструмент валидации JSON-документов. С описанием вы можете познакомиться по [адресу](https://json-schema.org/understanding-json-schema/index.html).
+JSON Schema предлагает нам инструмент валидации JSON-документов. С описанием вы можете познакомиться по [адресу](https://json-schema.org/understanding-json-schema).
 
 Как строится схема: 
 ```js
