@@ -1,4 +1,4 @@
-# Интеграция проектов на базе Selenium и Selenide c Github Actions        
+# Интеграция проектов c Github Actions        
 
 1. После реализации проекта в Idea добавьте в папку .github/workflows файл gradle.yml  
 ![](img/1.png)        
@@ -30,7 +30,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Start SUT
-        run: java -jar ./artifacts/app-order.jar & # Имя файла SUT будет отличаться в каждой задаче
+        run: java -jar ./artifacts/app-mbank.jar & # Имя файла SUT будет отличаться в каждой задаче
       - name: Build with Gradle
         run: ./gradlew test --info  #  Для проектов на базе Selenide необходимо добавить параметр для запуска браузера
                                     #  в headless режиме -Dselenide.headless=true
