@@ -87,7 +87,7 @@ test {
 
 Детальнее можете почитать про headless:
 - [Chrome](https://www.chromestatus.com/features/5678767817097216),
-- [Gecko (Firefox)](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode).
+- [Gecko (Firefox)](https://hacks.mozilla.org/2017/12/using-headless-mode-in-firefox/).
 
 Включение **headless**-режима при использовании **Selenium** необходимо реализовать в коде во время создания экземпляра WebDriver:
 
