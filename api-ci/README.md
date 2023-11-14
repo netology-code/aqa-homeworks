@@ -248,35 +248,41 @@ JSON Schema предлагает нам инструмент валидации 
 }
 ```
 
-Что нужно сделать:
+Начнем с изучения проекта, проверим необходимые условия для построения проекта.   
 
-#### Шаг 1. Добавить зависимость
+Что нужно сделать:    
+
+#### Шаг 1. Зависимости проекта
 
 ```groovy
 dependencies {
-    testImplementation 'io.rest-assured:rest-assured:4.3.0'
-    testImplementation 'io.rest-assured:json-schema-validator:4.3.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
+    testImplementation 'io.rest-assured:rest-assured:5.3.1'
+    testImplementation 'io.rest-assured:json-schema-validator:4.3.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
 }
 ```
 
-#### Шаг 2. Сохранить схему в ресурсах
+#### Шаг 2. JSON схема    
 
-Создайте каталог `resources` в `src/test` и поместите туда схему. Не забудьте удалить комментарии:
+В каталоге `resources` в `src/test` и должен лежать файл схемы.    
 
 ![](pic/schema.png)
 
-#### Шаг 3. Включить проверку схемы
+#### Шаг 3. Проверка ответа сервиса на соответсвие схеме    
 
-Модифицируйте существующий тест так, чтобы он проверял соответствие схеме. Для этого:
+Один из классов проекта должен содержать операцию проверки соответствия ответа схеме. 
 
 ```java
       // код теста
       .then()
           .statusCode(200)
-          // static import для JsonSchemaValidator.matchesJsonSchemaInClasspath
-          .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
-      ;
+          .body(matchesJsonSchemaInClasspath("accounts.schema.json"));
+```
+
+В тестовом классе должен быть импорт статического метода        
+
+```java
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 ```
 
 Удостоверьтесь, что тесты проходят при соответствии ответа схеме и падают, если вы поменяете что-то в схеме, например, тип для `id`.
