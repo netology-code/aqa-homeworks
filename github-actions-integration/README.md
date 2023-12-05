@@ -30,10 +30,16 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Start SUT
-        run: java -jar ./artifacts/app-mbank.jar & # Имя файла SUT будет отличаться в каждой задаче
+        # Запускаем SUT,
+        # имя файла SUT будет отличаться в каждой задаче.
+        # & означает, что в фоновом режиме не блокируем терминал для запуска тестов, 
+        # обязательно должен быть для запуска SUT в CI
+        run: java -jar ./artifacts/app-mbank.jar &
       - name: Build with Gradle
-        run: ./gradlew test --info  #  Для проектов на базе Selenide необходимо добавить параметр для запуска браузера
-                                    #  в headless режиме -Dselenide.headless=true
+        # Запускаем автотесты
+        # Для проектов на базе Selenide необходимо добавить параметр для запуска браузера
+        # в headless режиме -Dselenide.headless=true, параметр --info должен остаться
+        run: ./gradlew test --info  
 ```    
 
 
