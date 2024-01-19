@@ -55,13 +55,13 @@ public class CashbackHackService {
 
 #### Описание
 
-TestNG сравнительно неплохо [документирован](https://testng.org/doc/documentation-main.html).
+TestNG сравнительно неплохо [документирован](https://testng.org/#_testng_documentation).
 
 На этом уровне, **с точки зрения пользователя**, почти всё, что поменяется, — мы подключим другую библиотеку и будем использовать аннотации из неё и asserts.
 
-[Ключевые аннотации](https://testng.org/doc/documentation-main.html#annotations) (вы можете прочитать Javadoc на них).
+[Ключевые аннотации](https://testng.org/#_annotations) (вы можете прочитать [Javadoc](https://www.javadoc.io/doc/org.testng/testng/7.1.0/org/testng/annotations/package-summary.html)).
 
-[Ключевые asserts](https://testng.org/doc/documentation-main.html#success-failure) (вы можете прочитать Javadoc на них).
+[Ключевые asserts](https://testng.org/#_success_failure_and_assert) (вы можете прочитать [Javadoc](https://www.javadoc.io/doc/org.testng/testng/7.1.0/org/testng/asserts/package-summary.html)).
 
 #### Что нужно сделать
 
