@@ -68,8 +68,8 @@ dependencies {
     
     // при реализации проекте с использованием Selenium вместо библиотеки com.codeborne:selenide подключаются
     // org.seleniumhq.selenium:selenium-java и io.github.bonigarcia:webdrivermanager
-    // testImplementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
-    // testImplementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
+    // testImplementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+    // testImplementation 'io.github.bonigarcia:webdrivermanager:5.7.0'
 }
 
 test {
