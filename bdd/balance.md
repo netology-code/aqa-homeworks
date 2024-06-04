@@ -53,7 +53,7 @@ public class DashboardPage {
   private final String balanceStart = "баланс: ";
   private final String balanceFinish = " р.";
 
-  public Dashboard() {
+  public DashboardPage() {
   }
 
   public int getFirstCardBalance() {
