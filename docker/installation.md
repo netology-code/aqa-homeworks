@@ -17,37 +17,6 @@
 Q: Что делать, если ничего не получилось?      
 A: Обратитесь за консультацией к координатору группы или к преподавателю.
 
-## Дополнительная настройка Docker Desktop
-
-В настоящее время наблюдается нестабильная работа Docker в России, для преодоления трудностей может потребоваться дополнительная настройка движка докера.    
-
-Если при попытке получения образа в логах вы видите сообщение вида         
-```
-mysql Error pull access denied for mysql, repository does not exist or may require 'docker login': denied: <html><body><h1>403 Forbidden</h1>                                                                                                                                                            1.3s
-Since Docker is a US company, we must comply with US export control regulations. In an effort to comply with these, we now block all IP ad...              1.4s
-Error response from daemon: pull access denied for mysql, repository does not exist or may require 'docker login': denied: <html><body><h1>403 Forbidden</h1>
-Since Docker is a US company, we must comply with US export control regulations. In an effort to comply with these, we now block all IP addresses that are located in Cuba, Iran, North Korea, Republic of Crimea, Sudan, and Syria. If you are not in one of these cities, countries, or regions and are blocked, please reach out to https://hub.docker.com/support/contact/
-</body></html>   
-```
-то рекомендуется выполнение донастройки докера:     
-* откройте приложение Docker Desktop и перейдите в настройки         
-![](pic/docker-desktop.png)      
-
-* перейдите в меню Docker Engine           
-![](pic/docker-settings.png)   
-
-* в JSON настройки движка добавьте объект registry-mirrors и нажмите `Apply & restart`, не забудь поставить запятую после последнего объекта в существующем файле     
-```
-"registry-mirrors": [
-    "https://mirror.gcr.io",
-    "https://daocloud.io",
-    "https://c.163.com",
-    "https://registry.docker-cn.com"
-  ]
-```  
-ваши настройки должны выглядеть примерно так       
-![](pic/docker-engine.png)
-
 ## Работа с Play With Docker
 
 **Использование и настройка сервиса Play With Docker не являются обязательными. Сервис можно использовать в ознакомительных целях. Домашние задания рекомендуется выполнять на локальной машине с помощью Docker Desktop, либо на виртуальной машине.**        
