@@ -48,7 +48,7 @@
 
 ![](pic/success.png)
 
-**Важно:** в этот раз вы не должны хардкодить данные прямо в тест. Используйте Faker, Lombok, data-классы для группировки нужных полей и утилитный класс-генератор данных — см. пример в презентации. 
+**Важно:** в этот раз вы не должны хардкодить данные прямо в тест. Используйте Faker, [Lombok](https://projectlombok.org/setup/gradle), data-классы для группировки нужных полей и утилитный класс-генератор данных — см. [пример](https://github.com/netology-code/aqa-code/blob/master/patterns/patterns-task1/src/test/java/ru/netology/delivery/data/DataGenerator.java). 
 
 Утилитными называют классы, у которых приватный конструктор и статичные методы.
 
