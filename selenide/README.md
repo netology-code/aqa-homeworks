@@ -2,7 +2,9 @@
 
 В качестве результата пришлите ссылку на ваш GitHub-проект в личном кабинете студента на сайте [netology.ru](https://netology.ru).
 
-Все задачи этого занятия нужно делать в одном репозитории. Автотесты первой и второй задач можно реализовать в одном классе или разбить по разным в рамках одного проекта. Ветки репозитория для разделения задач использовать не рекомендуется. 
+Все задачи этого занятия нужно делать в одном репозитории. Автотесты первой и второй задач можно реализовать в одном классе или разбить по разным в рамках одного проекта. Ветки репозитория для разделения задач использовать не рекомендуется.
+
+**Важно**: проекты с решением задач по данной теме реализуются с использованием **Selenide**.
 
 **Важно**: если у вас что-то не получилось, то оформляйте issue [по установленным правилам](../report-requirements.md).
 
@@ -23,9 +25,67 @@
 1. Задачи, отмеченные как необязательные, можно не сдавать, это не повлияет на получение зачёта.    
 1. Автотесты могут падать и сборка может быть красной из-за багов тестируемого приложения. В таком случае должны быть заведены репорты на обнаруженные в ходе тестирования дефекты в отдельных issues, [придерживайтесь схемы при описании](../report-requirements.md).
 
-## Настройка CI
-    
-Настройка CI осуществляется аналогично предыдущему заданию, за исключением того, что файл целевого сервиса теперь называется `app-card-delivery.jar`.
+## Настройка
+
+### 1. Целевой сервис
+
+Файл целевого сервиса расположен в файле `app-card-delivery.jar` в этом репозитории. Вам нужно его скачать и положить в каталог `artifacts` вашего проекта.
+
+### 2. `build.gradle`
+
+Файл `build.gradle` в проектах на базе Selenide должен выглядеть следующим образом:
+
+```groovy
+plugins {
+    id 'java'
+}
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 11
+
+// кодировка файлов (если используете русский язык в файлах)
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
+    testImplementation 'com.codeborne:selenide:6.17.2'
+}
+
+test {
+    useJUnitPlatform()
+    // в тестах, вызывая `gradlew test -Dselenide.headless=true` будем передавать этот параметр в JVM (где его подтянет Selenide)
+    // свойство selenide.headless используется в проектах на основе Selenide для передачи значения параметра в JVM
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+    // свойство chromeoptions.prefs используется для задания настроек браузера в проектах на основе Selenide, выключаем менеджер паролей 
+    systemProperty 'chromeoptions.prefs', System.getProperty('chromeoptions.prefs', "profile.password_manager_leak_detection=false")
+}
+```
+
+### 3. `.appveyor.yml`
+
+Команда запуска SUT в секции `install` будет выглядеть следующим образом
+```yaml
+  - java -jar ./artifacts/app-card-delivery.jar &
+```
+
+Кроме этого тесты нужно запускать так, чтобы **Selenide** запускал браузер в headless-режиме.    
+
+Секция `build_script` для включения headless режима будет выглядеть так
+```yaml
+build_script:
+  - ./gradlew test --info -Dselenide.headless=true
+```    
+
+### 4. `gradle.yml`
+
+Если вы используете Github Actions для интеграции с проектом, то в `gradle.yml` надо внести аналогичные `.appveyor.yml` изменения.
 
 ## Задача №1: заказ доставки карты
 
