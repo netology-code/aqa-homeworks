@@ -167,7 +167,7 @@ JUnit5 представляет из себя комплексный проек�
 ```groovy
 dependencies {
     testImplementation 'junit:junit:4.13'
-    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.6.2'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.10.2'
 }
 
 test {
@@ -180,11 +180,11 @@ test {
 3\. Добавьте в зависимости JUnit Jupiter (по факту — замените код из п.1):
 ```groovy
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
 
     testImplementation 'junit:junit:4.13'
-    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.6.2'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.10.2'
 }
 
 test {

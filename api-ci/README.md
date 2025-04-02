@@ -150,9 +150,9 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'io.rest-assured:rest-assured:5.3.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
-    testImplementation 'io.rest-assured:json-schema-validator:4.3.1'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'io.rest-assured:json-schema-validator:5.5.0'
 }
 
 test {
@@ -264,9 +264,9 @@ JSON Schema предлагает нам инструмент валидации 
 
 ```groovy
 dependencies {
-    testImplementation 'io.rest-assured:rest-assured:5.3.1'
-    testImplementation 'io.rest-assured:json-schema-validator:4.3.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
+    testImplementation 'io.rest-assured:json-schema-validator:5.5.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 }
 ```
 

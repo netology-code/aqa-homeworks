@@ -90,8 +90,8 @@ Content-Type: application/json
 
 Подключается обычным образом в Gradle:
 ```groovy
-testImplementation 'io.rest-assured:rest-assured:4.3.0'
-testImplementation 'com.google.code.gson:gson:2.8.6'
+testImplementation 'io.rest-assured:rest-assured:5.5.0'
+testImplementation 'com.google.code.gson:gson:2.10.1'
 ```
 
 Библиотека [Gson](https://github.com/google/gson) нужна для того, чтобы иметь возможность сериализовать Java-объекты в JSON.
