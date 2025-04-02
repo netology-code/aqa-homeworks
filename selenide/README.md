@@ -54,8 +54,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
-    testImplementation 'com.codeborne:selenide:6.17.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'com.codeborne:selenide:6.19.1'
 }
 
 test {
