@@ -1,6 +1,6 @@
 # Как установить и настроить Java Development Kit (JDK)
 Студентам данного курса рекомендуется для установки JDK 11.
-1. Предварительно скачайте Java Development Kit [по&nbsp;ссылке](https://adoptium.net/temurin/releases/?version=11). Выберите необходимую версию для используемой операционной системы.
+1. Предварительно скачайте Java Development Kit [по&nbsp;ссылке](https://disk.360.yandex.ru/d/PUXGZKby3WfTlg). Выберите необходимую версию для используемой операционной системы.
 
 ![](img/120607.png)
 
