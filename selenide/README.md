@@ -146,7 +146,7 @@ build_script:
 В таком случае вам придётся повторить действия пользователя на странице.   
     
 Содержимое поля необходимо выделить и послать нажатие кнопок для удаления текста в поле.   
-Нажатие клавиш умеет посылать метод `sendKeys(CharSequence... keysToSend)`, а необходимые клавиши вы найдете в енаме [Keys](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/Keys.html).          
+Нажатие клавиш умеет посылать метод `press(CharSequence... keysToPress)`, а необходимые клавиши вы найдете в енаме [Keys](https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/Keys.html).          
 Выделить текст можно двойным кликом или сочетанием клавиш.        
 </details>
 
